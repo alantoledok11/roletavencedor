@@ -166,9 +166,9 @@ function spin() {
         const finalRotation = currentRotation % 360;
         const segmentSize = 360 / participants.length;
 
-        // Arrow is at top. Wheel rotates clockwise.
-        // Need to find which segment ended up at top
-        const adjustedAngle = (360 - finalRotation) % 360;
+        // Arrow is at Left (270 degrees). Wheel rotates clockwise.
+        // Need to find which segment ended up at 270 degrees
+        const adjustedAngle = (270 - finalRotation + 360) % 360;
         const winningIndex = Math.floor(adjustedAngle / segmentSize) % participants.length;
 
         const selectedName = participants[winningIndex];
